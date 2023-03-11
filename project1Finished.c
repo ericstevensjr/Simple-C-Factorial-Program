@@ -4,28 +4,32 @@
 
 int main()
 {
-    int fact1 = 1;
-    int fact2;
-    int fact3;
-    int fact4;
-    int fact5;
-    int fact6;
-    int fact7;
+    // User inputs number to be used in factorial equation
+    int userInt;
+    float userFloat;
+    printf("Enter a number to find it's factorial: ")
+    // Type checking to see if the inputted number is int, float, or invalid
+    // Type checking for integer
+    if (scanf(%d, &userInt) == 1) {
+        // Number was an integer
+        printf("You entered the integer: %d", userInt);
+    }
+    // Type checking for float
+    else if (scanf("%f", &userFloat) == 1) {
+        // Number was a float
+        printf("You entered the decimal number: %f", userFloat)
+    }
+    // If neither, return invalid input
+    else {
+       printf("Invalid input. You must enter a integer or decimal number.")
+       return 1;
+    }
 
-    fact2 = (fact1 * 2);
-    fact3 = (fact2 * 3);
-    fact4 = (fact3 * 4);
-    fact5 = (fact4 * 5);
-    fact6 = (fact5 * 6);
-    fact7 = (fact6 * 7);
-
-    printf("Factorial of 1 is: %d\n", fact1);
-    printf("Factorial of 2 is: %d\n", fact2);
-    printf("Factorial of 3 is: %d\n", fact3);
-    printf("Factorial of 4 is: %d\n", fact4);
-    printf("Factorial of 5 is: %d\n", fact5);
-    printf("Factorial of 6 is: %d\n", fact6);
-    printf("Factorial of 7 is: %d\n", fact7);
-
+    /*
+    *   Type checking is done. Next is performing calculations on the inputted numbers. Maybe using a
+    *       loop to perform as many factorials as the user inputs. Either way, I also want to implement
+    *       error catching where the user inputs an invalid value, the program can still work without
+    *       stopping.
+    */
     return 0;
 }
